@@ -29,7 +29,7 @@ const BackOffice = () => {
               throw new Error('No token found, please login');
             }
     
-            const response = await fetch(`http://172.17.10.101:8080/check-in/${confirmationNmbr}`,{
+            const response = await fetch(`http://localhost:8080/check-in/${confirmationNmbr}`,{
                 headers: {
                     'Authorization': `Bearer ${token}`, // Add Authorization header with the token
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const BackOffice = () => {
         console.log(decodedToken);
 
         try {
-            const response = await fetch(`http://172.17.10.101:8080/check-in/${data.id}`, {
+            const response = await fetch(`http://localhost:8080/check-in/${data.id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`, // Add Authorization header with the token

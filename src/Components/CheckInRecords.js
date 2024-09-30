@@ -4,7 +4,7 @@ import './CheckInRecords.css';
 const RecordCard = ({ id, name, phone, email, date, confirmationNumber, status }) => {
     const handleDownload = () => {
         // Construct the download URL
-        const downloadUrl = `http://172.17.10.101:8080/download-file/${id}`;
+        const downloadUrl = `http://localhost:8080/download-file/${id}`;
         
         // Create a temporary anchor element
         // const link = document.createElement('a');
@@ -52,7 +52,7 @@ const CheckInRecords = () => {
         }
 
         // Fetch the data from the API
-        fetch('http://172.17.10.101:8080/check-in',{
+        fetch('http://localhost:8080/check-in',{
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${token}`, // Add Authorization header with the token

@@ -21,7 +21,7 @@ const Dashboard = () => {
           throw new Error('No token found, please login');
         }
   
-        const response = await fetch('http://172.17.10.101:8080/check-in', {
+        const response = await fetch('http://localhost:8080/check-in', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Add Authorization header with the token

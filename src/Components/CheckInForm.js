@@ -88,7 +88,7 @@ const CheckInForm = () => {
         }
 
         try {
-            const response = await fetch('http://172.17.10.101:8080/check-in', {
+            const response = await fetch('http://localhost:8080/check-in', {
                 method: 'POST',
                 body: data,
             });
